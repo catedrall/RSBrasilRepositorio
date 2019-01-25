@@ -151,5 +151,10 @@ namespace RSBrasil.API.Controllers
                 return new JsonResult(StatusCode(StatusCodes.Status400BadRequest, "Erro inesperado!"));
             }
         }
+
+        public void Nada()
+        {
+
+        }
     }
 }
