@@ -34,8 +34,11 @@ namespace RSBrasil.API.Controllers
                     Email email = new Email(cliente.Email);
                     Cliente novoCliente = new Cliente(cliente.CNPJ, cliente.Contato, email, cliente.NomeFantasia, cliente.RazaoSocial, cliente.Telefone, cliente.IdContrato);
                     ClienteBusiness negocio = new ClienteBusiness();
-                    negocio.Inserir(novoCliente);
-                    return StatusCode(StatusCodes.Status200OK, "Cliente criado com sucesso!");
+                    int result = negocio.Inserir(novoCliente);
+                    if(result > 0)
+                        return StatusCode(StatusCodes.Status200OK, "Cliente criado com sucesso!");
+                    else
+                        return BadRequest("Cliente já cadastrado!");
                 }
                 catch (Exception)
                 {
@@ -150,11 +153,6 @@ namespace RSBrasil.API.Controllers
             {
                 return new JsonResult(StatusCode(StatusCodes.Status400BadRequest, "Erro inesperado!"));
             }
-        }
-
-        public void Nada()
-        {
-
         }
     }
 }

@@ -6,7 +6,6 @@ using Flunt.Validations;
 
 namespace RSBrasil.Shared.Model
 {
-    //public class ModelBase : Notifiable
     public class ModelBase
     {
         public int Id { get; set; }

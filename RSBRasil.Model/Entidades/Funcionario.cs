@@ -16,7 +16,7 @@ namespace RSBRasil.Model.Entidades
 
         }
 
-        public Funcionario(string carteiraMotorista, string carteiraTrabalho, string celular, string cPF, string login, Nome nome, string rG, string senha, string telefone, DateTime dataNascimento, int idCargo, int idEndereco, int idFuncionario, int idPerfilAcesso)
+        public Funcionario(string carteiraMotorista, string carteiraTrabalho, string celular, string cPF, string login, string nome, string rG, string senha, string telefone, DateTime dataNascimento, int idCargo, int idEndereco, int idFuncionario, int idPerfilAcesso)
         {
             CarteiraMotorista = carteiraMotorista;
             CarteiraTrabalho = carteiraTrabalho;
@@ -119,7 +119,7 @@ namespace RSBRasil.Model.Entidades
         public string Celular { get; set; }
         public string CPF { get; set; }
         public string Login { get; set; }
-        public Nome Nome { get; set; }
+        public string Nome { get; set; }
         public string RG { get; set; }
         public string Senha { get; set; }
         public string Telefone { get; set; }

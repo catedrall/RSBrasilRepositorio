@@ -3,6 +3,7 @@ using RSBrasil.Shared.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace RSBrasil.Data
@@ -27,12 +28,12 @@ namespace RSBrasil.Data
             }
         }
 
-        public void Inserir(T entity)
+        public int Inserir(T entity)
         {
             using (var context = new SistemaContext<T>())
             {
                 context.Entity.Add(entity);
-                context.SaveChanges();
+                return context.SaveChanges();
             }
         }
 
@@ -78,6 +79,15 @@ namespace RSBrasil.Data
             {
                 context.RemoveRange(entities);
                 context.SaveChanges();
+            }
+        }
+
+        public T BuscaQualquerParametro(Expression<Func<T, bool>> predicate)
+        {
+            using (var context = new SistemaContext<T>())
+            {
+                var result = context.Entity.Where(predicate).FirstOrDefault();
+                return result;
             }
         }
     }

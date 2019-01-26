@@ -12,10 +12,18 @@ namespace RSBrasil.Business
     {
         private IRepositorioBase<Cliente> repositorioCliente = new Repositorio<Cliente>();
 
-        public void Inserir(Cliente cliente)
+        public int Inserir(Cliente cliente)
         {
-            cliente.DataInclusao = DateTime.Now;
-            repositorioCliente.Inserir(cliente);
+            var existe = repositorioCliente.BuscaQualquerParametro(x => x.CNPJ == cliente.CNPJ);
+            if (existe == null)
+            {
+                cliente.DataInclusao = DateTime.Now;
+                return repositorioCliente.Inserir(cliente);
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         public Cliente BuscaCliente(int Id)
