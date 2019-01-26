@@ -31,7 +31,7 @@ namespace RSBrasil.Shared.ValueObjects
         public static string FormatarPropriedade(string valor)
         {
             string retorno = valor.Replace(".", "").Replace("-", "").Replace("/", "").Replace(" ", "").Replace("(","").Replace(")", "");
-            return retorno;
+            return retorno; 
         }
     }
 }
