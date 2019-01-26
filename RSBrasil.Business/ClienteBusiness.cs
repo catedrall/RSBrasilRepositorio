@@ -29,14 +29,29 @@ namespace RSBrasil.Business
         public Cliente BuscaCliente(int Id)
         {
             if (Id > 0)
-                return repositorioCliente.PesquisarPorId(Id);
+            {
+                Cliente cliente = repositorioCliente.PesquisarPorId(Id);
+                if (cliente != null)
+                {
+                    cliente.ColcarMascara();
+                }
+                return cliente;
+            }  
             else
                 return null;
         }
 
         public List<Cliente> ListarTodos()
         {
-            return repositorioCliente.Listar();
+            List<Cliente> clientes = repositorioCliente.Listar();
+            if (clientes != null)
+            {
+                foreach (var item in clientes)
+                {
+                    item.ColcarMascara();
+                }
+            }
+            return clientes;
         }
 
         public void ExcluirCliente(int Id)

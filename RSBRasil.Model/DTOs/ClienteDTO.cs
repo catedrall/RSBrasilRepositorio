@@ -1,6 +1,7 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 using RSBrasil.Model.Interface.Command;
+using RSBrasil.Shared.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +21,8 @@ namespace RSBrasil.Model.DTOs
         public int? IdContrato { get; set; }
 
         private Regex regex = new Regex(@"^[1-9]{2}\-[2-9][0-9]{7,8}$");
-        
+        //private Regex regex = new Regex(@"^([1-9]{2}) [2-9]\-[0-9]{7,8}$");
+
         public void Validate()
         {
             AddNotifications(new Contract()
@@ -42,14 +44,9 @@ namespace RSBrasil.Model.DTOs
             bool verifica = this.regex.IsMatch(this.Telefone);
             if (verifica)
             {
-                this.Telefone = FormataPropriedade(this.Telefone);
+                this.Telefone = Mascara.FormatarPropriedade(this.Telefone);
             }
             return verifica;
-        }
-
-        public string FormataPropriedade(string valor)
-        {
-            return valor = valor.Replace(".", "").Replace("-", "").Replace("/", "").Replace(" ", "");
         }
 
         public bool ValidaCNPJ()
@@ -61,7 +58,7 @@ namespace RSBrasil.Model.DTOs
             string digito;
             string tempCnpj;
             this.CNPJ = this.CNPJ.Trim();
-            this.CNPJ = this.CNPJ.Replace(".", "").Replace("-", "").Replace("/", "");
+            this.CNPJ = Mascara.FormatarPropriedade(CNPJ);
 
             if (this.CNPJ.Length != 14)
                 return false;

@@ -18,12 +18,12 @@ namespace RSBrasil.Model.Entidades
 
         public Cliente(string cNPJ, string contato, Email email, string nomeFantasia, string razaoSocial, string telefone, int? idContrato)
         {
-            CNPJ = FormataPropriedade(cNPJ);
+            CNPJ = Mascara.FormatarPropriedade(cNPJ);
             Contato = contato;
             Email = email.Endereco;
             NomeFantasia = nomeFantasia;
             RazaoSocial = razaoSocial;
-            Telefone = FormataPropriedade(telefone);
+            Telefone = Mascara.FormatarPropriedade(telefone);
             IdContrato = idContrato;
         }
         
@@ -35,9 +35,11 @@ namespace RSBrasil.Model.Entidades
         public string Telefone { get; set; }
         public int? IdContrato { get; set; }
 
-        public string FormataPropriedade(string valor)
+        
+        public void ColcarMascara()
         {
-            return valor = valor.Replace(".", "").Replace("-", "").Replace("/","").Replace(" ", "");
+            this.Telefone = Mascara.MascaraTelefones(this.Telefone);
+            this.CNPJ = Mascara.MascaraCnpj(this.CNPJ);
         }
 
         public bool ValidaCNPJ()
@@ -49,7 +51,7 @@ namespace RSBrasil.Model.Entidades
             string digito;
             string tempCnpj;
             CNPJ = CNPJ.Trim();
-            CNPJ = CNPJ.Replace(".", "").Replace("-", "").Replace("/", "");
+            CNPJ = Mascara.FormatarPropriedade(CNPJ);
 
             if (CNPJ.Length != 14)
                 return false;
