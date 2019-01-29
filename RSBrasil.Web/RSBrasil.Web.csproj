@@ -126,7 +126,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\ClientesController.cs" />
+=======
+>>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
     <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -147,7 +150,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+<<<<<<< HEAD
     <Content Include="Scripts\pages\clientes.js" />
+=======
+>>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -162,7 +168,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+<<<<<<< HEAD
     <Content Include="Scripts\menuLateral\jquery-1.11.1.min.js" />
+=======
+>>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
     <Content Include="Scripts\menuLateral\menuLateral.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
@@ -186,8 +195,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\DashBoard\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Clientes\Index.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
+=======
+>>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
