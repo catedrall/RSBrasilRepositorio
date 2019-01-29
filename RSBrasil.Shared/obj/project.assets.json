@@ -707,11 +707,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Shared\\RSBrasil.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Shared\\RSBrasil.Shared.csproj",
       "projectName": "RSBrasil.Shared",
-      "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Shared\\RSBrasil.Shared.csproj",
+      "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Shared\\RSBrasil.Shared.csproj",
       "packagesPath": "C:\\Users\\Ivo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Shared\\obj\\",
+      "outputPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

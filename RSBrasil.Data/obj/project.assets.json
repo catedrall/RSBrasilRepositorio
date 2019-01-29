@@ -3390,11 +3390,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Data\\RSBrasil.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Data\\RSBrasil.Data.csproj",
       "projectName": "RSBrasil.Data",
-      "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Data\\RSBrasil.Data.csproj",
+      "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Data\\RSBrasil.Data.csproj",
       "packagesPath": "C:\\Users\\Ivo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBrasil.Data\\obj\\",
+      "outputPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasil.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3413,8 +3413,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBRasil.Model\\RSBrasil.Model.csproj": {
-              "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBrasilRepositorio\\RSBRasil.Model\\RSBrasil.Model.csproj"
+            "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBRasil.Model\\RSBrasil.Model.csproj": {
+              "projectPath": "C:\\Users\\Ivo\\Desktop\\RSBrasil_gitt\\RSBRasil.Model\\RSBrasil.Model.csproj"
             }
           }
         }

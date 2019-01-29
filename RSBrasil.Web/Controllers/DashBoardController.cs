@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using System.Text;
-=======
->>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
 using System.Web;
 using System.Web.Mvc;
 
@@ -17,7 +14,6 @@ namespace RSBrasil.Web.Controllers
         {
             return View();
         }
-<<<<<<< HEAD
 
         public string CriarMenu()
         {
@@ -74,7 +70,5 @@ namespace RSBrasil.Web.Controllers
 
             return layout;
         }
-=======
->>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
     }
 }

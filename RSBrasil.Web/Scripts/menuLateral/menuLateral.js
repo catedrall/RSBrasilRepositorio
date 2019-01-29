@@ -9,11 +9,7 @@
 
     function hamburger_cross() {
 
-<<<<<<< HEAD
         if (isClosed == true) {
-=======
-        if (isClosed === true) {
->>>>>>> 4b89e71ee9205606e3de75f25669df29ae64832e
             overlay.hide();
             trigger.removeClass('is-open');
             trigger.addClass('is-closed');
