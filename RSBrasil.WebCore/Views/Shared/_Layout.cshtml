@@ -1,0 +1,300 @@
+﻿@RenderBody()
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/menuLateral.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand tituloMenu">
+                    <a href="#" class="tituloMenu">
+                        RSBrasil
+                    </a>
+                </li>
+                <!--Administrador-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle links" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Administrador
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Telas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Perfil Acesso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Tipo Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Funcionarios-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle links" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Funcionario
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Cadastro
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Uniforme
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Afastamento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Exames
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Cargo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Local de trabalho
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Férias
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Beneficios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Punições
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Relatórios-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle links" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Relatórios
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Funcionarios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Faltas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Beneficios x Funcionario
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Afastamento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Funcionario x Local Trabalho
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Histórcio de salário
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Funcionário x Afastamento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Contrato Clientes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Clientes valores
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Cadastro-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle links" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Cadastro
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Funcionario
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Tipo Funcionario
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Cargo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Tipo de Documento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Afastamento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Afastamento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Beneficios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Uniforme
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Tipo de endereço
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--Cliente-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle links" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Cliente
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-folder-close"></span>
+                                Cliente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                Contrato
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="links">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Funcionario X Cliente
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+
+        </div>
+    </div>
+    <!--Conteudo-->
+    <div class="container body-content">
+        <hr />
+        <footer></footer>
+    </div>
+    <script src="~/Scripts/menuLateral/jquery-1.11.1.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/menuLateral/menuLateral.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
