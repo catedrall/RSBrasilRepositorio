@@ -1,0 +1,41 @@
+[1mdiff --git a/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.props b/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.props[m
+[1mindex 3ca9e4a..078c872 100644[m
+[1m--- a/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.props[m
+[1m+++ b/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.props[m
+[36m@@ -3,16 +3,16 @@[m
+   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">[m
+     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>[m
+     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>[m
+[31m-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Ivo\Desktop\RSBrasil_gitt\RSBRasil.Model\obj\project.assets.json</ProjectAssetsFile>[m
+[32m+[m[32m    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\prime.genilson\source\repos\RSBrasil\RSBRasil.Model\obj\project.assets.json</ProjectAssetsFile>[m
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>[m
+[31m-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Ivo\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>[m
+[32m+[m[32m    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\prime.genilson\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>[m
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>[m
+[31m-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.0</NuGetToolVersion>[m
+[32m+[m[32m    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.4.1</NuGetToolVersion>[m
+   </PropertyGroup>[m
+   <PropertyGroup>[m
+     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>[m
+   </PropertyGroup>[m
+   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">[m
+[31m-    <Import Project="$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props')" />[m
+[32m+[m[32m    <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.props')" />[m
+   </ImportGroup>[m
+ </Project>[m
+\ No newline at end of file[m
+[1mdiff --git a/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.targets b/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.targets[m
+[1mindex 562d65f..91fd1c9 100644[m
+[1m--- a/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.targets[m
+[1m+++ b/RSBRasil.Model/obj/RSBRasil.Model.csproj.nuget.g.targets[m
+[36m@@ -4,7 +4,7 @@[m
+     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>[m
+   </PropertyGroup>[m
+   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">[m
+[31m-    <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />[m
+[31m-    <Import Project="$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.targets')" />[m
+[32m+[m[32m    <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />[m
+[32m+[m[32m    <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.targets" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\build\netcoreapp2.0\Microsoft.NETCore.App.targets')" />[m
+   </ImportGroup>[m
+ </Project>[m
+\ No newline at end of file[m
