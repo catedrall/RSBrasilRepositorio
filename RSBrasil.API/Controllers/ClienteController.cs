@@ -32,7 +32,21 @@ namespace RSBrasil.API.Controllers
                 try
                 {
                     Email email = new Email(cliente.Email);
-                    Cliente novoCliente = new Cliente(cliente.CNPJ, cliente.Contato, email, cliente.NomeFantasia, cliente.RazaoSocial, cliente.Telefone, cliente.IdContrato);
+                    Cliente novoCliente = new Cliente(cliente.CNPJ, 
+                                                      cliente.Contato, 
+                                                      email, 
+                                                      cliente.NomeFantasia, 
+                                                      cliente.RazaoSocial, 
+                                                      cliente.Telefone, 
+                                                      cliente.Cep,
+                                                      cliente.Logradouro,
+                                                      cliente.Numero,
+                                                      cliente.Complemento,
+                                                      cliente.Bairro,
+                                                      cliente.Cidade,
+                                                      cliente.UF,
+                                                      cliente.Pais,
+                                                      cliente.IdContrato);
                     ClienteBusiness negocio = new ClienteBusiness();
                     int result = negocio.Inserir(novoCliente);
                     if(result > 0)

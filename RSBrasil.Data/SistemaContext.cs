@@ -29,7 +29,7 @@ namespace RSBrasil.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=127.0.0.1;user id=root;password=just4fun;port=3306;database=sistema;persistsecurityinfo=True");
+            optionsBuilder.UseMySql("server=127.0.0.1;user id=root;password=Zq1Xw2Ce3;port=3306;database=sistema;persistsecurityinfo=True");
             base.OnConfiguring(optionsBuilder);
         }
     }

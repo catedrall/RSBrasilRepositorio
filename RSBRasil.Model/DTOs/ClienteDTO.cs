@@ -19,6 +19,16 @@ namespace RSBrasil.Model.DTOs
         public string NomeFantasia { get; set; }
         public string Telefone { get; set; }
         public int? IdContrato { get; set; }
+        
+        /// Endereco
+        public string Cep { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Complemento { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string UF { get; set; }
+        public string Pais { get; set; }
 
         private Regex regex = new Regex(@"^[1-9]{2}\-[2-9][0-9]{7,8}$");
         //private Regex regex = new Regex(@"^([1-9]{2}) [2-9]\-[0-9]{7,8}$");
@@ -36,6 +46,14 @@ namespace RSBrasil.Model.DTOs
                 .HasMinLen(this.Contato, 10, "Contato", "Contato digite um nome válido")
                 .IsNotNullOrEmpty(this.Telefone, "Telefone", "Telefone é obrigatória")
                 .IsTrue(ValidaTelefone(), "Telefone", "Digite um Telefone válido")
+                .IsNotNullOrEmpty(this.Cep, "Cep", "Cep é obrigatória")
+                .HasMinLen(this.Cep, 8, "Cep", "Cep inválido")
+                .IsNotNullOrEmpty(this.Logradouro, "Logradouro", "Logradouro é obrigatória")
+                .IsNotNullOrEmpty(this.Numero, "Numero", "Numero é obrigatória")
+                .IsNotNullOrEmpty(this.Bairro, "Bairro", "Bairro é obrigatória")
+                .IsNotNullOrEmpty(this.Cidade, "Cidade", "Cidade é obrigatória")
+                .IsNotNullOrEmpty(this.UF, "UF", "UF é obrigatória")
+                .IsNotNullOrEmpty(this.Pais, "Pais", "Pais é obrigatória")
             );
         }
 
