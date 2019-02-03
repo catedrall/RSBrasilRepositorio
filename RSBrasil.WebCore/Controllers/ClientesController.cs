@@ -43,8 +43,8 @@ namespace RSBrasil.Web.Controllers
                 HttpClient client = new HttpClient();
                 string url = _configuration["EPListarClientes"];
                 var response = client.GetStringAsync(url);
-                var produtos = JsonConvert.DeserializeObject<List<Cliente>>(response.Result);
-                return produtos;
+                var clientes = JsonConvert.DeserializeObject<List<Cliente>>(response.Result);
+                return clientes;
             }
             catch (Exception ex)
             {

@@ -1,0 +1,263 @@
+﻿@model List<RSBRasil.Model.Entidades.Funcionario>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CarteiraMotorista)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CarteiraTrabalho)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Celular)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CPF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Login)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Senha)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataAdmissao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ColaboradorUniformeIdColaborador)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ativo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EstadoCivil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RacaCor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NomePai)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NomeMae)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nacionalidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NacionalidadeUf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Escolaridade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Deficiencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeficienciaObservacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Banco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoConta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumeroAgencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumeroConta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UltimoPeriodoFeriasInicio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UltimoPeriodoFeriasFim)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FeriasGozadas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FeriasGozar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataLimiteFerias)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdFuncionarioDocumento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdCargo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdEndereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdFuncionario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdPerfilAcesso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataInclusao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataAlteracao)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarteiraMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarteiraTrabalho)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAdmissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColaboradorUniformeIdColaborador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCivil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RacaCor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeMae)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacionalidadeUf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Escolaridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deficiencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeficienciaObservacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Banco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoConta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroAgencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroConta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimoPeriodoFeriasInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimoPeriodoFeriasFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeriasGozadas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeriasGozar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLimiteFerias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFuncionarioDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEndereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPerfilAcesso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInclusao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAlteracao)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
