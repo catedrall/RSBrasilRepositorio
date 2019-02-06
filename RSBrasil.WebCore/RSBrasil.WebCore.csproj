@@ -18,4 +18,10 @@
     <ProjectReference Include="..\RSBRasil.Model\RSBrasil.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Funcionario\Novo.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

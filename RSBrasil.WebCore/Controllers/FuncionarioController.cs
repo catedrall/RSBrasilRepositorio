@@ -26,6 +26,11 @@ namespace RSBrasil.WebCore.Controllers
             return View();
         }
 
+        public ActionResult Novo()
+        {
+            return View();
+        }
+
         public List<Funcionario> GetFuncionariosAsync()
         {
             try
