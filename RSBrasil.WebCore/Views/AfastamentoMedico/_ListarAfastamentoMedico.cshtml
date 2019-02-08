@@ -1,0 +1,58 @@
+﻿@model List<RSBRasil.Model.Entidades.Afastamentomedico>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdFuncionario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDocumento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdTipoAfastamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataInicioAfastamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataFimAfastamento)
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFuncionario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoAfastamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicioAfastamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFimAfastamento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

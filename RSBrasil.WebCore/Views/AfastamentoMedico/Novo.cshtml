@@ -1,0 +1,58 @@
+﻿@model RSBRasil.Model.Entidades.Afastamentomedico
+
+@{
+    ViewData["Title"] = "Novo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Novo</h2>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Novo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Funcionario" class="control-label"></label>
+                <input asp-for="Funcionario" class="form-control" />
+                <span asp-validation-for="Funcionario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Documento" class="control-date"></label>
+                <input asp-for="Documento" class="form-control" />
+                <span asp-validation-for="Documento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipodeAfastamento" class="control-label"></label>
+                <input asp-for="TipodeAfastamento" class="form-control" />
+                <span asp-validation-for="TipodeAfastamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInicioAfastamento" class="control-label"></label>
+                <input asp-for="DataInicioAfastamento" class="form-control" />
+                <span asp-validation-for="DataInicioAfastamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataFimAfastamento" class="control-label"></label>
+                <input asp-for="DataFimAfastamento" class="form-control" />
+                <span asp-validation-for="DataFimAfastamento" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
