@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using RSBRasil.Model.Entidades;
 using System.Net.Http;
 using Newtonsoft.Json;
+using RSBrasil.Model.Enuns;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RSBrasil.WebCore.Controllers
 {
@@ -28,6 +30,22 @@ namespace RSBrasil.WebCore.Controllers
 
         public ActionResult Novo()
         {
+            var enumSexo = from ESexo e in Enum.GetValues(typeof(ESexo))
+                           select new
+                           {
+                               ID = (int)e,
+                               Name = e.ToString()
+                           };
+            ViewBag.SexoList = new SelectList(enumSexo, "ID", "Name");
+
+            var enumEstadoCivil = from EEstadoCivil e in Enum.GetValues(typeof(EEstadoCivil))
+                           select new
+                           {
+                               ID = (int)e,
+                               Name = e.ToString()
+                           };
+            ViewBag.EstadoCivilList = new SelectList(enumEstadoCivil, "ID", "Name");
+
             return View();
         }
 

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Novo</h2>
+@*<h2>Novo</h2>
 
 <h4>Cliente</h4>
 <hr />
@@ -227,5 +227,206 @@
 
 <div>
     <a asp-action="Index">Back to List</a>
+</div>*@
+
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Funcionário</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Novo funcionário
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form asp-action="Novo">
+                                <div class="form-group">
+                                    <label asp-for="Nome" class="control-label"></label>
+                                    <input asp-for="Nome" class="form-control" />
+                                    <span asp-validation-for="Nome" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="DataNascimento" class="control-date"></label>
+                                    <input asp-for="DataNascimento" class="form-control" />
+                                    <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="DataNascimento" class="control-date"></label>
+                                    <input asp-for="DataNascimento" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Telefone" class="control-label"></label>
+                                    <input asp-for="Telefone" class="form-control" />
+                                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Celular" class="control-label"></label>
+                                    <input asp-for="Celular" class="form-control" />
+                                    <span asp-validation-for="Celular" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Login" class="control-label"></label>
+                                    <input asp-for="Login" class="form-control" />
+                                    <span asp-validation-for="Login" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Senha" class="control-label"></label>
+                                    <input asp-for="Senha" class="form-control" />
+                                    <span asp-validation-for="Senha" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Ativo" class="control-label"></label>
+                                    <input asp-for="Ativo" class="form-control" />
+                                    <span asp-validation-for="Ativo" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Sexo" class="control-label"></label>
+                                    @Html.DropDownList("Sexo", ViewBag.SexoList as SelectList, new { @class = "form-control" })
+                                    <span asp-validation-for="Sexo" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Estado civil</label>
+                                    @Html.DropDownList("EstadoCivil", ViewBag.EstadoCivilList as SelectList, new { @class = "form-control" })
+                                    <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="RacaCor" class="control-label"></label>
+                                    <input asp-for="RacaCor" class="form-control" />
+                                    <span asp-validation-for="RacaCor" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NomePai" class="control-label"></label>
+                                    <input asp-for="NomePai" class="form-control" />
+                                    <span asp-validation-for="NomePai" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NomeMae" class="control-label"></label>
+                                    <input asp-for="NomeMae" class="form-control" />
+                                    <span asp-validation-for="NomeMae" class="text-danger"></span>
+                                </div>                                
+
+                                <div class="form-group">
+                                    <label asp-for="Nacionalidade" class="control-label"></label>
+                                    <input asp-for="Nacionalidade" class="form-control" />
+                                    <span asp-validation-for="Nacionalidade" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NacionalidadeUF" class="control-label"></label>
+                                    <input asp-for="NacionalidadeUF" class="form-control" />
+                                    <span asp-validation-for="NacionalidadeUF" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Escolaridade" class="control-label"></label>
+                                    <input asp-for="Escolaridade" class="form-control" />
+                                    <span asp-validation-for="Escolaridade" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Deficiencia" class="control-label"></label>
+                                    <input asp-for="Deficiencia" class="form-control" />
+                                    <span asp-validation-for="Deficiencia" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="DeficienciaObservacao" class="control-label"></label>
+                                    <input asp-for="DeficienciaObservacao" class="form-control" />
+                                    <span asp-validation-for="DeficienciaObservacao" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Banco" class="control-label"></label>
+                                    <input asp-for="Banco" class="form-control" />
+                                    <span asp-validation-for="Banco" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="TipoConta" class="control-label"></label>
+                                    <input asp-for="TipoConta" class="form-control" />
+                                    <span asp-validation-for="TipoConta" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NumeroAgencia" class="control-label"></label>
+                                    <input asp-for="NumeroAgencia" class="form-control" />
+                                    <span asp-validation-for="NumeroAgencia" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NumeroConta" class="control-label"></label>
+                                    <input asp-for="NumeroConta" class="form-control" />
+                                    <span asp-validation-for="NumeroConta" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="DataAdmissao" class="control-label"></label>
+                                    <input asp-for="DataAdmissao" class="form-control" />
+                                    <span asp-validation-for="DataAdmissao" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="UltimoPeriodoFeriasInicio" class="control-label"></label>
+                                    <input asp-for="UltimoPeriodoFeriasInicio" class="form-control" />
+                                    <span asp-validation-for="UltimoPeriodoFeriasInicio" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="UltimoPeriodoFeriasFim" class="control-label"></label>
+                                    <input asp-for="UltimoPeriodoFeriasFim" class="form-control" />
+                                    <span asp-validation-for="UltimoPeriodoFeriasFim" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="FeriasGozadas" class="control-label"></label>
+                                    <input asp-for="FeriasGozadas" class="form-control" />
+                                    <span asp-validation-for="FeriasGozadas" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="FeriasGozar" class="control-label"></label>
+                                    <input asp-for="FeriasGozar" class="form-control" />
+                                    <span asp-validation-for="FeriasGozar" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="DataLimiteFerias" class="control-label"></label>
+                                    <input asp-for="DataLimiteFerias" class="form-control" />
+                                    <span asp-validation-for="DataLimiteFerias" class="text-danger"></span>
+                                </div>
+
+                                
+                                <button type="submit" class="btn btn-default">Submit Button</button>
+                                <button type="reset" class="btn btn-default">Reset Button</button>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
 </div>
+<!-- /#page-wrapper -->
 
