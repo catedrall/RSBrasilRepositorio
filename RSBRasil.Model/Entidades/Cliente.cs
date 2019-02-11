@@ -16,24 +16,15 @@ namespace RSBrasil.Model.Entidades
 
         }
 
-        public Cliente(string CNPJ, string contato, Email email, string nomeFantasia, string razaoSocial, string telefone, string cep, 
-                        string logradouro, string numero, string complemento, string bairro, string cidade, string uf, string pais, int? idContrato)
+        public Cliente(string _CNPJ, string contato, Email email, string nomeFantasia, string razaoSocial, string telefone, int? idContrato)
         {
-            CNPJ = Mascara.FormatarPropriedade(CNPJ);
-            Contato = contato;
-            Email = email.Endereco;
-            NomeFantasia = nomeFantasia;
-            RazaoSocial = razaoSocial;
-            Telefone = Mascara.FormatarPropriedade(telefone);
-            IdContrato = idContrato;
-            Cep = cep;
-            Logradouro = logradouro;
-            Numero = numero;
-            Complemento = complemento;
-            Bairro = bairro;
-            Cidade = cidade;
-            UF = uf;
-            Pais = pais;
+            this.CNPJ = Mascara.FormatarPropriedade(_CNPJ);
+            this.Contato = contato;
+            this.Email = email.Endereco;
+            this.NomeFantasia = nomeFantasia;
+            this.RazaoSocial = razaoSocial;
+            this.Telefone = Mascara.FormatarPropriedade(telefone);
+            this.IdContrato = idContrato;
         }
         
         public string CNPJ { get; set; }
@@ -43,15 +34,6 @@ namespace RSBrasil.Model.Entidades
         public string NomeFantasia { get; set; }
         public string Telefone { get; set; }
         public int? IdContrato { get; set; }
-        /// Endereco
-        public string Cep { get; set; }
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cidade { get; set; }
-        public string UF { get; set; }
-        public string Pais { get; set; }
         
 
         public void ColcarMascara()

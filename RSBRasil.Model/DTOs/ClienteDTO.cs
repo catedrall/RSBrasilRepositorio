@@ -52,8 +52,7 @@ namespace RSBrasil.Model.DTOs
                 .IsNotNullOrEmpty(this.Numero, "Numero", "Numero é obrigatória")
                 .IsNotNullOrEmpty(this.Bairro, "Bairro", "Bairro é obrigatória")
                 .IsNotNullOrEmpty(this.Cidade, "Cidade", "Cidade é obrigatória")
-                .IsNotNullOrEmpty(this.UF, "UF", "UF é obrigatória")
-                .IsNotNullOrEmpty(this.Pais, "Pais", "Pais é obrigatória")
+                .IsNotNullOrEmpty(this.UF, "UF", "Estado é obrigatória")
             );
         }
 

@@ -1,7 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RSBrasil.Model.Entidades;
+using RSBrasil.Model.Enuns;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,6 +33,14 @@ namespace RSBrasil.Web.Controllers
 
         public ActionResult Novo()
         {
+            var enumEstados = from EEstados e in Enum.GetValues(typeof(EEstados))
+                              select new
+                              {
+                                  ID = (int)e,
+                                  Name = e.ToString()
+                              };
+            ViewBag.EstadosList = new SelectList(enumEstados, "ID", "Name");
+
             return View();
         }
 

@@ -12,7 +12,7 @@ namespace RSBrasil.Business
     {
         private IRepositorioBase<Cliente> repositorioCliente = new Repositorio<Cliente>();
 
-        public int Inserir(Cliente cliente)
+        public Cliente Inserir(Cliente cliente)
         {
             var existe = repositorioCliente.BuscaQualquerParametro(x => x.CNPJ == cliente.CNPJ);
             if (existe == null)
@@ -22,7 +22,7 @@ namespace RSBrasil.Business
             }
             else
             {
-                return -1;
+                return null;
             }
         }
 

@@ -28,12 +28,13 @@ namespace RSBrasil.Data
             }
         }
 
-        public int Inserir(T entity)
+        public T Inserir(T entity)
         {
             using (var context = new SistemaContext<T>())
             {
                 context.Entity.Add(entity);
-                return context.SaveChanges();
+                context.SaveChanges();
+                return entity;
             }
         }
 

@@ -1,162 +1,115 @@
-﻿@model RSBrasil.Model.Entidades.Cliente
+﻿@model RSBrasil.Model.DTOs.ClienteDTO
 
 @{
     ViewData["Title"] = "Novo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="col-lg-12">
-    <h2>Adicionando Novo Cliente</h2>
-</div>
-<hr />
-<div id="page-wrapper" style="min-height: 393px;">
+<div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <form asp-action="Novo">
-                <div class="panel panel-default">
-                    <div class="col-lg-12">
-                        <div class="panel-heading">Dados Do cliente</div>
-                    </div>
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                    <div class="panel-body">
-
-                        <div class="row">
-                            <div class="col-lg-5">
+            <h1 class="page-header">Cliente</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Novo cliente
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form asp-action="Novo">
                                 <div class="form-group">
                                     <label>CNPJ</label>
-                                    <input class="form-control" />
+                                    <input asp-for="CNPJ" class="form-control" />
                                 </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label style="margin-left:60px">Contato</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-5">
                                 <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">E-mail</label>
-                                    <input class="form-control" />
+                                    <label>Contato</label>
+                                    <input asp-for="Contato" class="form-control" />
                                 </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Razão Social</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-5">
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <label style="margin-left:60px">Nome Fantasia</label>
-                                        <input class="form-control" />
-                                    </div>
+                                    <label>E-mail</label>
+                                    <input asp-for="Email" class="form-control" />
                                 </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label style="margin-left:60px">Telefone</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                        </div>
 
+                                <div class="form-group">
+                                    <label>Razão Social</label>
+                                    <input asp-for="RazaoSocial" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nome Fantasia</label>
+                                    <input asp-for="NomeFantasia" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Telefone</label>
+                                    <input asp-for="Telefone" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Logradouro" class="control-label"></label>
+                                    <input asp-for="Logradouro" class="form-control" />
+                                    <span asp-validation-for="Logradouro" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Número</label>
+                                    <input asp-for="Numero" class="form-control" />
+                                    <span asp-validation-for="Numero" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Complemento" class="control-label"></label>
+                                    <input asp-for="Complemento" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Bairro" class="control-label"></label>
+                                    <input asp-for="Bairro" class="form-control" />
+                                    <span asp-validation-for="Bairro" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Cep" class="control-label"></label>
+                                    <input asp-for="Cep" class="form-control" />
+                                    <span asp-validation-for="Cep" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Cidade" class="control-label"></label>
+                                    <input asp-for="Cidade" class="form-control" />
+                                    <span asp-validation-for="Cidade" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    @Html.DropDownList("UF", ViewBag.EstadosList as SelectList, new { @class = "form-control" })
+                                    <span asp-validation-for="UF" class="text-danger"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-default">Submit Button</button>
+                                <button type="reset" class="btn btn-default">Reset Button</button>
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <!-- /.col-lg-6 (nested) -->
                     </div>
+                    <!-- /.row (nested) -->
                 </div>
-
-                <div class="panel panel-default">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="panel-heading">Endereço do cliente</div>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">CEP</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Logradouro</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Número</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Complemento</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Bairro</label>
-                                    <input class="form-control" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Cidade</label>
-                                    <select class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">UF</label>
-                                    <select class="form-control" />
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group">
-                                    <label class="control-label" style="margin-left:60px">Pais</label>
-                                    <select class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="form-group">
-                        <div class="col-lg-6">
-                            <input type="submit" value="Inserir" class="btn btn-default" />
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="button" value="Voltar" class="btn btn-default" />
-                        </div>
-                    </div>
-                </div>
-            </form>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
         </div>
+        <!-- /.col-lg-12 -->
     </div>
+    <!-- /.row -->
 </div>
-<div>
-</div>
+<!-- /#page-wrapper -->
 

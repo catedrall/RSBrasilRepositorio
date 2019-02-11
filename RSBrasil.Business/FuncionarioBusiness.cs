@@ -12,7 +12,7 @@ namespace RSBrasil.Business
     {
         private IRepositorioBase<Funcionario> repositorioFuncionario = new Repositorio<Funcionario>();
 
-        public int Inserir(Funcionario funcionario)
+        public Funcionario Inserir(Funcionario funcionario)
         {
             var existe = repositorioFuncionario.BuscaQualquerParametro(x => x.CPF == funcionario.CPF);
             if (existe == null)
@@ -22,7 +22,7 @@ namespace RSBrasil.Business
             }
             else
             {
-                return -1;
+                return null;
             }
         }
 

@@ -37,26 +37,38 @@ namespace RSBrasil.API.Controllers
                                                       email, 
                                                       cliente.NomeFantasia, 
                                                       cliente.RazaoSocial, 
-                                                      cliente.Telefone, 
-                                                      cliente.Cep,
-                                                      cliente.Logradouro,
-                                                      cliente.Numero,
-                                                      cliente.Complemento,
-                                                      cliente.Bairro,
-                                                      cliente.Cidade,
-                                                      cliente.UF,
-                                                      cliente.Pais,
+                                                      cliente.Telefone,
                                                       cliente.IdContrato);
+
                     ClienteBusiness negocio = new ClienteBusiness();
-                    int result = negocio.Inserir(novoCliente);
-                    if(result > 0)
-                        return StatusCode(StatusCodes.Status200OK, "Cliente criado com sucesso!");
+                    Cliente result = negocio.Inserir(novoCliente);
+
+                    if(result != null)
+                    {
+                        EnderecoBusiness negocioEndereco = new EnderecoBusiness();
+
+                        Enderecos endCliente = new Enderecos(cliente.Cep);
+                        endCliente.Bairro = cliente.Bairro;
+                        endCliente.Cidade = cliente.Cidade;
+                        endCliente.Complemento = cliente.Complemento;
+                        endCliente.Idclientefuncionario = result.Id;
+                        endCliente.Logradouro = cliente.Logradouro;
+                        endCliente.Numero = cliente.Numero;
+                        endCliente.Pais = "Brasil";
+
+                        Enderecos end = negocioEndereco.Inserir(endCliente);
+
+                        if (end != null)
+                            return StatusCode(StatusCodes.Status200OK, "Cliente criado com sucesso!");
+                        else
+                            return BadRequest("Erro inesperado!");
+                    }                        
                     else
                         return BadRequest("Cliente já cadastrado!");
                 }
                 catch (Exception ex)
                 {
-                    return BadRequest("Erro inesperado!"+ ex.Message.ToString());
+                    return BadRequest("Erro inesperado!");
                 }
             }
         }

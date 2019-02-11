@@ -132,7 +132,7 @@ namespace RSBRasil.Model.Entidades
         public string NomePai { get; set; }
         public string NomeMae { get; set; }
         public string Nacionalidade { get; set; }
-        public string NacionalidadeUf { get; set; }
+        public int NacionalidadeUf { get; set; }
         public int Escolaridade { get; set; }
         public bool Deficiencia { get; set; }
         public string DeficienciaObservacao { get; set; }

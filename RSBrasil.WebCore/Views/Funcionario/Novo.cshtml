@@ -1,4 +1,4 @@
-﻿@model RSBRasil.Model.Entidades.Funcionario
+﻿@model RSBrasil.Model.DTOs.FuncionarioDTO
 
 @{
     ViewData["Title"] = "Novo";
@@ -254,13 +254,9 @@
                                     <span asp-validation-for="Nome" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="DataNascimento" class="control-date"></label>
+                                    <label>Data Nascimento</label>
                                     <input asp-for="DataNascimento" class="form-control" />
                                     <span asp-validation-for="DataNascimento" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="DataNascimento" class="control-date"></label>
-                                    <input asp-for="DataNascimento" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="Telefone" class="control-label"></label>
@@ -302,19 +298,19 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="RacaCor" class="control-label"></label>
-                                    <input asp-for="RacaCor" class="form-control" />
+                                    <label>Raça</label>
+                                    @Html.DropDownList("RacaCor", ViewBag.CorPeleList as SelectList, new { @class = "form-control" })
                                     <span asp-validation-for="RacaCor" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="NomePai" class="control-label"></label>
+                                    <label>Nome Pai</label>
                                     <input asp-for="NomePai" class="form-control" />
                                     <span asp-validation-for="NomePai" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="NomeMae" class="control-label"></label>
+                                    <label>Nome Mãe</label>
                                     <input asp-for="NomeMae" class="form-control" />
                                     <span asp-validation-for="NomeMae" class="text-danger"></span>
                                 </div>                                
@@ -326,25 +322,19 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="NacionalidadeUF" class="control-label"></label>
-                                    <input asp-for="NacionalidadeUF" class="form-control" />
-                                    <span asp-validation-for="NacionalidadeUF" class="text-danger"></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label asp-for="Escolaridade" class="control-label"></label>
-                                    <input asp-for="Escolaridade" class="form-control" />
+                                    <label asp-for="Escolaridade" class="control-label"></label>                                    
+                                    @Html.DropDownList("Nacionalidade", ViewBag.EscolaridadeList as SelectList, new { @class = "form-control" })
                                     <span asp-validation-for="Escolaridade" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="Deficiencia" class="control-label"></label>
+                                    <label>Deficiência</label>
                                     <input asp-for="Deficiencia" class="form-control" />
                                     <span asp-validation-for="Deficiencia" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="DeficienciaObservacao" class="control-label"></label>
+                                    <label>Deficiência Observação</label>
                                     <input asp-for="DeficienciaObservacao" class="form-control" />
                                     <span asp-validation-for="DeficienciaObservacao" class="text-danger"></span>
                                 </div>
@@ -356,25 +346,25 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="TipoConta" class="control-label"></label>
-                                    <input asp-for="TipoConta" class="form-control" />
+                                    <label>Tipo Conta</label>
+                                    @Html.DropDownList("TipoConta", ViewBag.TipoContaList as SelectList, new { @class = "form-control" })
                                     <span asp-validation-for="TipoConta" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="NumeroAgencia" class="control-label"></label>
+                                    <label>Número Agência</label>
                                     <input asp-for="NumeroAgencia" class="form-control" />
                                     <span asp-validation-for="NumeroAgencia" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="NumeroConta" class="control-label"></label>
+                                    <label>Numero Conta</label>
                                     <input asp-for="NumeroConta" class="form-control" />
                                     <span asp-validation-for="NumeroConta" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="DataAdmissao" class="control-label"></label>
+                                    <label>Data Admissao</label>
                                     <input asp-for="DataAdmissao" class="form-control" />
                                     <span asp-validation-for="DataAdmissao" class="text-danger"></span>
                                 </div>
@@ -409,6 +399,46 @@
                                     <span asp-validation-for="DataLimiteFerias" class="text-danger"></span>
                                 </div>
 
+                                <div class="form-group">
+                                    <label asp-for="Logradouro" class="control-label"></label>
+                                    <input asp-for="Logradouro" class="form-control" />
+                                    <span asp-validation-for="Logradouro" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Numero" class="control-label"></label>
+                                    <input asp-for="Numero" class="form-control" />
+                                    <span asp-validation-for="Numero" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Complemento" class="control-label"></label>
+                                    <input asp-for="Complemento" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Bairro" class="control-label"></label>
+                                    <input asp-for="Bairro" class="form-control" />
+                                    <span asp-validation-for="Bairro" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Cep" class="control-label"></label>
+                                    <input asp-for="Cep" class="form-control" />
+                                    <span asp-validation-for="Cep" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Cidade" class="control-label"></label>
+                                    <input asp-for="Cidade" class="form-control" />
+                                    <span asp-validation-for="Cidade" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    @Html.DropDownList("UF", ViewBag.EstadosList as SelectList, new { @class = "form-control" })
+                                    <span asp-validation-for="UF" class="text-danger"></span>
+                                </div>
                                 
                                 <button type="submit" class="btn btn-default">Submit Button</button>
                                 <button type="reset" class="btn btn-default">Reset Button</button>

@@ -46,6 +46,39 @@ namespace RSBrasil.WebCore.Controllers
                            };
             ViewBag.EstadoCivilList = new SelectList(enumEstadoCivil, "ID", "Name");
 
+            var enumEstados = from EEstados e in Enum.GetValues(typeof(EEstados))
+                                  select new
+                                  {
+                                      ID = (int)e,
+                                      Name = e.ToString()
+                                  };
+            ViewBag.EstadosList = new SelectList(enumEstados, "ID", "Name");
+
+            var enumCorPele = from ERacaCor e in Enum.GetValues(typeof(ERacaCor))
+                              select new
+                              {
+                                  ID = (int)e,
+                                  Name = e.ToString()
+                              };
+            ViewBag.CorPeleList = new SelectList(enumCorPele, "ID", "Name");
+
+            var enumTipoConta = from ETipoConta e in Enum.GetValues(typeof(ETipoConta))
+                              select new
+                              {
+                                  ID = (int)e,
+                                  Name = e.ToString()
+                              };
+            ViewBag.TipoContaList = new SelectList(enumTipoConta, "ID", "Name");
+
+            var enumEscolaridade = from EEscolaridade e in Enum.GetValues(typeof(EEscolaridade))
+                                select new
+                                {
+                                    ID = (int)e,
+                                    Name = e.ToString()
+                                };
+            ViewBag.EscolaridadeList = new SelectList(enumEscolaridade, "ID", "Name");
+
+
             return View();
         }
 

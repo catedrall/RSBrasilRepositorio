@@ -7,6 +7,7 @@ using RSBrasil.Model.DTOs;
 using Microsoft.AspNetCore.Http;
 using RSBrasil.Business;
 using RSBRasil.Model.Entidades;
+using RSBrasil.Model.Entidades;
 
 namespace RSBrasil.API.Controllers
 {
@@ -45,12 +46,32 @@ namespace RSBrasil.API.Controllers
                         funcionario.IdEndereco,
                         funcionario.IdFuncionario,
                         funcionario.IdPerfilAcesso);
+
                     FuncionarioBusiness negocio = new FuncionarioBusiness();
-                    int result = negocio.Inserir(novoFuncionario);
-                    if (result > 0)
-                        return StatusCode(StatusCodes.Status200OK, "Cliente criado com sucesso!");
+                    Funcionario result = negocio.Inserir(novoFuncionario);
+
+                    if (result != null)
+                    {
+                        EnderecoBusiness negocioEndereco = new EnderecoBusiness();
+
+                        Enderecos endCliente = new Enderecos(funcionario.Cep);
+                        endCliente.Bairro = funcionario.Bairro;
+                        endCliente.Cidade = funcionario.Cidade;
+                        endCliente.Complemento = funcionario.Complemento;
+                        endCliente.Idclientefuncionario = result.Id;
+                        endCliente.Logradouro = funcionario.Logradouro;
+                        endCliente.Numero = funcionario.Numero;
+                        endCliente.Pais = "Brasil";
+
+                        Enderecos end = negocioEndereco.Inserir(endCliente);
+
+                        if (end != null)
+                            return StatusCode(StatusCodes.Status200OK, "Funcionário criado com sucesso!");
+                        else
+                            return BadRequest("Erro inesperado!");
+                    }   
                     else
-                        return BadRequest("Cliente já cadastrado!");
+                        return BadRequest("Funcionário já cadastrado!");
                 }
                 catch (Exception)
                 {
@@ -73,7 +94,7 @@ namespace RSBrasil.API.Controllers
                 }
                 else
                 {
-                    return new JsonResult(StatusCode(StatusCodes.Status200OK, "Cliente não localizado"));
+                    return new JsonResult(StatusCode(StatusCodes.Status200OK, "Funcionário não localizado"));
                 }
             }
             catch (Exception)
@@ -98,7 +119,7 @@ namespace RSBrasil.API.Controllers
                 }
                 else
                 {
-                    return new JsonResult(StatusCode(StatusCodes.Status200OK, "Funcionarios não localizados"));
+                    return new JsonResult(StatusCode(StatusCodes.Status200OK, "Funcionários não localizados"));
                 }
             }
             catch (Exception)
@@ -123,7 +144,7 @@ namespace RSBrasil.API.Controllers
                     {
                         FuncionarioBusiness negocio = new FuncionarioBusiness();
                         negocio.ExcluirFuncionario(cliente.Id);
-                        return StatusCode(StatusCodes.Status200OK, "Funcionario excluido com sucesso!");
+                        return StatusCode(StatusCodes.Status200OK, "Funcionário excluido com sucesso!");
                     }
                     catch (Exception)
                     {
@@ -153,7 +174,7 @@ namespace RSBrasil.API.Controllers
                     {
                         FuncionarioBusiness negocio = new FuncionarioBusiness();
                         negocio.EditarCliente(funcionario);
-                        return StatusCode(StatusCodes.Status200OK, "Funcionario alterado com sucesso!");
+                        return StatusCode(StatusCodes.Status200OK, "Funcionário alterado com sucesso!");
                     }
                     catch (Exception)
                     {

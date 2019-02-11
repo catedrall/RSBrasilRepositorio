@@ -31,9 +31,6 @@ namespace RSBrasil.Data.Map
             builder.Property(c => c.DataAlteracao)
                 .HasColumnName("DataAlteracao");
 
-            builder.Property(c => c.DataAlteracao)
-                .HasColumnName("DataAlteracao");
-
             builder.Property(c => c.DataInclusao)
                 .HasColumnName("DataInclusao");
 

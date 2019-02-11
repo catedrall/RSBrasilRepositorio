@@ -29,7 +29,7 @@ namespace RSBrasil.Model.DTOs
         public string NomePai { get; set; }
         public string NomeMae { get; set; }
         public string Nacionalidade { get; set; }
-        public string NacionalidadeUf { get; set; }
+        public int NacionalidadeUf { get; set; }
         public int Escolaridade { get; set; }
         public bool Deficiencia { get; set; }
         public string DeficienciaObservacao { get; set; }
@@ -47,6 +47,13 @@ namespace RSBrasil.Model.DTOs
         public int IdEndereco { get; set; }
         public int IdFuncionario { get; set; }
         public int IdPerfilAcesso { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Complemento { get; set; }
+        public string Bairro { get; set; }
+        public string Cep { get; set; }
+        public string Cidade { get; set; }
+        public string UF { get; set; }
 
         public void Validate()
         {
@@ -65,6 +72,13 @@ namespace RSBrasil.Model.DTOs
                 .HasMinLen(this.Login, 8, "Senha", "O senha não pode ter menos que 8 caracteres")
                 .HasMaxLen(this.Login, 20, "Senha", "O senha não pode ter mais que 20 caracteres")
                 .IsNotNullOrEmpty(this.DataNascimento.ToString(), "DataNascimento", "Data de nascimento é obrigatória")
+                .IsNotNullOrEmpty(this.Cep, "Cep", "Cep é obrigatória")
+                .HasMinLen(this.Cep, 8, "Cep", "Cep inválido")
+                .IsNotNullOrEmpty(this.Logradouro, "Logradouro", "Logradouro é obrigatória")
+                .IsNotNullOrEmpty(this.Numero, "Numero", "Numero é obrigatória")
+                .IsNotNullOrEmpty(this.Bairro, "Bairro", "Bairro é obrigatória")
+                .IsNotNullOrEmpty(this.Cidade, "Cidade", "Cidade é obrigatória")
+                //.IsNotNullOrEmpty(this.NacionalidadeUf, "UF", "Estado é obrigatória")
             );
         }
 
