@@ -24,3 +24,4 @@ C:\Users\prime.genilson\source\repos\RSBrasil\RSBrasilRepositorio\RSBrasil.Share
 C:\Users\prime.genilson\source\repos\RSBrasil\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.AssemblyInfo.cs
 C:\Users\prime.genilson\source\repos\RSBrasil\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.dll
 C:\Users\prime.genilson\source\repos\RSBrasil\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.pdb
+C:\Users\prime.genilson\source\repos\RSBrasil\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.csprojResolveAssemblyReference.cache
