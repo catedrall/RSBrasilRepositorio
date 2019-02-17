@@ -22,9 +22,6 @@
     <Content Update="Views\Uniforme\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Uniforme\Novo.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
     <Content Update="Views\Uniforme\_ListarUniforme.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

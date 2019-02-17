@@ -1,42 +1,60 @@
-﻿@model RSBRasil.Model.Entidades.Uniforme
+﻿@model RSBrasil.Model.DTOs.UniformeDTO
 
 @{
     ViewData["Title"] = "Novo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Novo</h2>
-
-<h4>Cliente</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Novo">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DataCompra" class="control-date"></label>
-                <input asp-for="DataCompra" class="form-control" />
-                <span asp-validation-for="DataCompra" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Duracao" class="control-label"></label>
-                <input asp-for="Duracao" class="form-control" />
-                <span asp-validation-for="Duracao" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Uniforme</h1>
+        </div>
+        <!-- /.col-lg-12 -->
     </div>
-</div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Novo uniforme
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form asp-action="Novo">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Descricao" class="control-label"></label>
+                                    <input asp-for="Descricao" class="form-control" />
+                                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="DataCompra" class="control-date"></label>
+                                    <input asp-for="DataCompra" class="form-control" />
+                                    <span asp-validation-for="DataCompra" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Duracao" class="control-label"></label>
+                                    <input asp-for="Duracao" class="form-control" />
+                                    <span asp-validation-for="Duracao" class="text-danger"></span>
+                                </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                @*<button type="reset" class="btn btn-default">Reset Button</button>*@
+                            </form>
+                        </div>
+                        <!-- /.col-lg-6 (nested) -->
+                        <!-- /.col-lg-6 (nested) -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
 </div>
-
+<!-- /#page-wrapper -->

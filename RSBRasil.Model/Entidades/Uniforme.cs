@@ -9,6 +9,11 @@ namespace RSBrasil.Model.Entidades
 {
     public class Uniforme : ModelBase
     {
+        public Uniforme()
+        {
+
+        }
+
         public string Descricao { get; set; }
         public DateTime? DataCompra { get; set; }
         public int? Duracao { get; set; }

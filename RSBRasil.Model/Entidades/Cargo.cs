@@ -10,7 +10,6 @@ namespace RSBrasil.Model.Entidades
     public class Cargo : ModelBase
     {
         public string Descricao { get; set; }
-        public int? Funcionario_ColaboradorUniforme_IdColaborador { get; set; }
         public int? Funcionario_IdFuncionario { get; set; }
         public int? HistoricoDePromocoes_IdHistoricoDePromocoes { get; set; }
     }

@@ -24,6 +24,7 @@ namespace RSBrasil.Data
         {
             modelBuilder.Entity<Cliente>(new ClienteMap().Configure);
             modelBuilder.Entity<Enderecos>(new EnderecosMap().Configure);
+            modelBuilder.Entity<Uniforme>(new UniformeMap().Configure);
             base.OnModelCreating(modelBuilder);
         }
 
