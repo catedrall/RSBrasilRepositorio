@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\TipoDeBeneficios\Novo.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Uniforme\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
