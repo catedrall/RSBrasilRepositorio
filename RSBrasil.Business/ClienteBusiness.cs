@@ -4,7 +4,6 @@ using RSBrasil.Model.Entidades;
 using RSBrasil.Model.Interface.Data;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RSBrasil.Business
 {

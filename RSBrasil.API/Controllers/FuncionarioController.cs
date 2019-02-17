@@ -63,9 +63,9 @@ namespace RSBrasil.API.Controllers
                         endCliente.Numero = funcionario.Numero;
                         endCliente.Pais = "Brasil";
 
-                        Enderecos end = negocioEndereco.Inserir(endCliente);
+                        endCliente = negocioEndereco.Inserir(endCliente);
 
-                        if (end != null)
+                        if (endCliente.Id > 0)
                             return StatusCode(StatusCodes.Status200OK, "Funcionário criado com sucesso!");
                         else
                             return BadRequest("Erro inesperado!");
@@ -110,7 +110,7 @@ namespace RSBrasil.API.Controllers
             {
                 FuncionarioBusiness negocio = new FuncionarioBusiness();
                 List<Funcionario> lista = new List<Funcionario>();
-                lista = negocio.ListarTodos();
+                lista = negocio.ListarTodosAtivos();
                 var result = new JsonResult(lista);
                 if (result != null)
                 {

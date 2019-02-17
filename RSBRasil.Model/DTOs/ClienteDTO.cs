@@ -4,6 +4,7 @@ using RSBrasil.Model.Interface.Command;
 using RSBrasil.Shared.ValueObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -14,8 +15,11 @@ namespace RSBrasil.Model.DTOs
         public int Id { get; set; }
         public string CNPJ { get; set; }
         public string Contato { get; set; }
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
+        [Display(Name = "Razão Social")]
         public string RazaoSocial { get; set; }
+        [Display(Name = "Nome fantasia")]
         public string NomeFantasia { get; set; }
         public string Telefone { get; set; }
         public int? IdContrato { get; set; }
@@ -23,6 +27,7 @@ namespace RSBrasil.Model.DTOs
         /// Endereco
         public string Cep { get; set; }
         public string Logradouro { get; set; }
+        [Display(Name = "Número")]
         public string Numero { get; set; }
         public string Complemento { get; set; }
         public string Bairro { get; set; }

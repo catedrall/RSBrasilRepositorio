@@ -39,6 +39,11 @@ namespace RSBrasil.Business
             return repositorioFuncionario.Listar();
         }
 
+        public List<Funcionario> ListarTodosAtivos()
+        {
+            return repositorioFuncionario.BuscaTodosQualquerParametro(x => x.Ativo == true);
+        }
+
         public void ExcluirFuncionario(int Id)
         {
             if (Id > 0)

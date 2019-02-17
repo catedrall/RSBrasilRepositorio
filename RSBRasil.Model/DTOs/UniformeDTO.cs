@@ -1,12 +1,8 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
 using RSBrasil.Model.Interface.Command;
-using RSBrasil.Shared.ValueObjects;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace RSBrasil.Model.DTOs
 {

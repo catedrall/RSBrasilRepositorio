@@ -10,6 +10,7 @@ namespace RSBrasil.Model.Interface.Data
         List<T> Listar();
         T PesquisarPorId(long id);
         T BuscaQualquerParametro(Expression<Func<T, bool>> predicate);
+        List<T> BuscaTodosQualquerParametro(Expression<Func<T, bool>> predicate);
         T Inserir(T entity);
         void InserirVarios(List<T> entities);
         void Atualizar(T entity);

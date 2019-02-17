@@ -91,5 +91,14 @@ namespace RSBrasil.Data
                 return result;
             }
         }
+
+        public List<T> BuscaTodosQualquerParametro(Expression<Func<T, bool>> predicate)
+        {
+            using (var context = new SistemaContext<T>())
+            {
+                var result = context.Entity.Where(predicate).ToList();
+                return result;
+            }
+        }
     }
 }
