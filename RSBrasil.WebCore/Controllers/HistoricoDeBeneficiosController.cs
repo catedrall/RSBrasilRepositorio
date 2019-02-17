@@ -31,6 +31,14 @@ namespace RSBrasil.WebCore.Controllers
                     "Id",
                     "NomeFantasia"
                 );
+
+            ViewBag.IdBeneficios = new SelectList
+                (
+                    GetClienteAsync(),
+                    "Id",
+                    "Nome"
+                );
+
             return View();
         }
 

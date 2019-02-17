@@ -26,15 +26,15 @@
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 
                                 <div class="form-group">
-                                    <label asp-for="DataFalta" class="control-label"></label>
-                                    <input asp-for="DataFalta" class="form-control" />
-                                    <span asp-validation-for="DataFalta" class="text-danger"></span>
+                                    <label asp-for="DataPagamento" class="control-label"></label>
+                                    <input asp-for="DataPagamento" class="form-control" />
+                                    <span asp-validation-for="DataPagamento" class="text-danger"></span>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label asp-for="IdCliente" class="control-label"></label>
-                                    <@Html.DropDownList("IdCliente", ViewBag.IdCliente as SelectList, new { @class = "form-control" })
-                                    <span asp-validation-for="IdCliente" class="text-danger"></span>
+                                    <label asp-for="IdTipoBeneficio" class="control-label"></label>
+                                    <@Html.DropDownList("IdTipoBeneficios", ViewBag.IdBeneficios as SelectList, new { @class = "form-control" })
+                                    <span asp-validation-for="IdTipoBeneficio" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
