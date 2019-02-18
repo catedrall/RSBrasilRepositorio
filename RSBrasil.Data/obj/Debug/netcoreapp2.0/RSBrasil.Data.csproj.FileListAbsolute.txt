@@ -52,3 +52,17 @@ C:\Users\Ivo\Desktop\rs\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.Asse
 C:\Users\Ivo\Desktop\rs\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.csproj.CopyComplete
 C:\Users\Ivo\Desktop\rs\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.dll
 C:\Users\Ivo\Desktop\rs\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Data.deps.json
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Data.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Data.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Model.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Shared.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Model.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\bin\Debug\netcoreapp2.0\RSBrasil.Shared.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.csprojAssemblyReference.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.csproj.CoreCompileInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.AssemblyInfoInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.AssemblyInfo.cs
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.csproj.CopyComplete
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Data\obj\Debug\netcoreapp2.0\RSBrasil.Data.pdb

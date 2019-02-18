@@ -34,3 +34,12 @@ C:\Users\Ivo\Desktop\rs\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.
 C:\Users\Ivo\Desktop\rs\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.AssemblyInfo.cs
 C:\Users\Ivo\Desktop\rs\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.dll
 C:\Users\Ivo\Desktop\rs\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\bin\Debug\netcoreapp2.0\RSBrasil.Shared.deps.json
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\bin\Debug\netcoreapp2.0\RSBrasil.Shared.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\bin\Debug\netcoreapp2.0\RSBrasil.Shared.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.csprojAssemblyReference.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.csproj.CoreCompileInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.AssemblyInfoInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.AssemblyInfo.cs
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBrasil.Shared\obj\Debug\netcoreapp2.0\RSBrasil.Shared.pdb

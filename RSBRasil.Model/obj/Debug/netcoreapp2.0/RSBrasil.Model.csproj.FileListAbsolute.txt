@@ -44,3 +44,15 @@ C:\Users\Ivo\Desktop\rs\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.As
 C:\Users\Ivo\Desktop\rs\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.csproj.CopyComplete
 C:\Users\Ivo\Desktop\rs\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.dll
 C:\Users\Ivo\Desktop\rs\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\bin\Debug\netcoreapp2.0\RSBrasil.Model.deps.json
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\bin\Debug\netcoreapp2.0\RSBrasil.Model.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\bin\Debug\netcoreapp2.0\RSBrasil.Model.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\bin\Debug\netcoreapp2.0\RSBrasil.Shared.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\bin\Debug\netcoreapp2.0\RSBrasil.Shared.pdb
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.csprojAssemblyReference.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.csproj.CoreCompileInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.AssemblyInfoInputs.cache
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.AssemblyInfo.cs
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.csproj.CopyComplete
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.dll
+C:\Users\genilsonsilva.assit\Documents\meu\RSBrasilRepositorio\RSBRasil.Model\obj\Debug\netcoreapp2.0\RSBrasil.Model.pdb
