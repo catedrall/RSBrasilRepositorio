@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RSBrasil.Model.DTOs
 {
-    public class UniformeDTO : Notifiable, ICommand
+    public class TipoAfastamentosDTO : Notifiable, ICommand
     {
         public int Id { get; set; }
         [Display(Name = "Descrição")]
@@ -21,7 +21,7 @@ namespace RSBrasil.Model.DTOs
             AddNotifications(new Contract()
                 .Requires()
                 .IsNotNullOrEmpty(this.Descricao, "Descricao", "Descricao é obrigatória")
-                .IsNotNullOrEmpty(this.DataCompra.Value.ToString(), "DataCompra", "Data compra é obrigatória")
+                .IsNotNullOrEmpty(this.DataCompra.ToString(), "DataCompra", "Data compra é obrigatória")
             );
         }
     }

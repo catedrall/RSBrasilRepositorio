@@ -12,18 +12,18 @@ using RSBRasil.Model.Entidades;
 
 namespace RSBrasil.WebCore.Controllers
 {
-    public class HistoricoFaltasController : Controller
+    public class HistoricoSalariosController : Controller
     {
         private IConfiguration _configuration;
 
-        public HistoricoFaltasController(IConfiguration configuration)
+        public HistoricoSalariosController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
         public ActionResult Novo()
         {
-            //Task<List<Cliente>> clientes = Testar();
+            Task<List<HistoricoSalarios>> clientes = Testar();
 
             ViewBag.IdCliente = new SelectList
                 (
@@ -31,26 +31,18 @@ namespace RSBrasil.WebCore.Controllers
                     "Id",
                     "NomeFantasia"
                 );
-
-            ViewBag.IdFuncionario = new SelectList
-                (
-                    GetFuncionarioAsync(),
-                    "Id",
-                    "Nome"
-                );
-
             return View();
         }
 
-        public List<Cliente> GetClienteAsync()
+        public List<HistoricoSalarios> GetClienteAsync()
         {
             try
             {
                 HttpClient client = new HttpClient();
                 string url = _configuration["EPListarClientes"];
                 var response = client.GetStringAsync(url);
-                var clientes = JsonConvert.DeserializeObject<List<Cliente>>(response.Result);
-                return clientes;
+                var historico = JsonConvert.DeserializeObject<List<HistoricoSalarios>>(response.Result);
+                return historico;
             }
             catch (Exception ex)
             {
@@ -58,15 +50,15 @@ namespace RSBrasil.WebCore.Controllers
             }
         }
 
-        public List<Funcionario> GetFuncionarioAsync()
+        public List<HistoricoSalarios> GetFuncionarioAsync()
         {
             try
             {
                 HttpClient client = new HttpClient();
                 string url = _configuration["EPListarFuncionarios"];
                 var response = client.GetStringAsync(url);
-                var funcionarios = JsonConvert.DeserializeObject<List<Funcionario>>(response.Result);
-                return funcionarios;
+                var historico = JsonConvert.DeserializeObject<List<HistoricoSalarios>>(response.Result);
+                return historico;
             }
             catch (Exception ex)
             {
@@ -74,7 +66,7 @@ namespace RSBrasil.WebCore.Controllers
             }
         }
 
-        public async Task<List<Cliente>> Testar()
+        public async Task<List<HistoricoSalarios>> Testar()
         {
             try
             {
@@ -82,8 +74,8 @@ namespace RSBrasil.WebCore.Controllers
                 string url = _configuration["EPListarClientes"];
                 var response = await client.GetAsync(url);
                 var content = await response.Content.ReadAsStringAsync();
-                List<Cliente> clientes = JsonConvert.DeserializeObject<List<Cliente>>(content);
-                return clientes;
+                List<HistoricoSalarios> historico = JsonConvert.DeserializeObject<List<HistoricoSalarios>>(content);
+                return historico;
             }
             catch (Exception ex)
             {

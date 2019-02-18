@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RSBrasil.Data.Map
 {
-    public class EnderecosMap
+    public class EnderecosMap : IEntityTypeConfiguration<Enderecos>
     {
         public void Configure(EntityTypeBuilder<Enderecos> builder)
         {

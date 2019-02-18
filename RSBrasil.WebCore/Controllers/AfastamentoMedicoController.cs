@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RSBRasil.Model.Entidades;
@@ -21,12 +22,20 @@ namespace RSBrasil.Web.Controllers
         // GET: Clientes
         public ActionResult Index()
         {
-            List<Afastamentomedico> afastamento = GetClienteAsync();
-            return View(afastamento);
+            //List<AfastamentoMedico> afastamento = GetClienteAsync();
+            //return View(afastamento);
+            return View();
         }
 
         public ActionResult Novo()
         {
+            ViewBag.IdFuncionario = new SelectList
+                (
+                    GetFuncionarioAsync(),
+                    "Id",
+                    "Nome"
+                );
+
             return View();
         }
 
@@ -34,15 +43,31 @@ namespace RSBrasil.Web.Controllers
         {
             return View();
         }
-                
-        public List<Afastamentomedico> GetClienteAsync()
+
+        public List<Funcionario> GetFuncionarioAsync()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                string url = _configuration["EPListarFuncionarios"];
+                var response = client.GetStringAsync(url);
+                var funcionarios = JsonConvert.DeserializeObject<List<Funcionario>>(response.Result);
+                return funcionarios;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<AfastamentoMedico> GetClienteAsync()
         {
             try
             {
                 HttpClient client = new HttpClient();
                 string url = _configuration["EPListarClientes"];
                 var response = client.GetStringAsync(url);
-                var afastamento = JsonConvert.DeserializeObject<List<Afastamentomedico>>(response.Result);
+                var afastamento = JsonConvert.DeserializeObject<List<AfastamentoMedico>>(response.Result);
                 return afastamento;
             }
             catch (Exception ex)

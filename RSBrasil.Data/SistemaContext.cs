@@ -22,9 +22,18 @@ namespace RSBrasil.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AfastamentoMedico>(new AfastamentoMedicoMap().Configure);
             modelBuilder.Entity<Cliente>(new ClienteMap().Configure);
             modelBuilder.Entity<Enderecos>(new EnderecosMap().Configure);
             modelBuilder.Entity<Uniforme>(new UniformeMap().Configure);
+            modelBuilder.Entity<HistoricoFalta>(new HistoricoFaltaMap().Configure);
+            modelBuilder.Entity<HistoricoBeneficios>(new HistoricoBeneficiosMap().Configure);
+            modelBuilder.Entity<HistoricoSalarios>(new HistoricoSalariosMap().Configure);
+            modelBuilder.Entity<TipoAfastamentos>(new TipoAfastamentosMap().Configure);
+            modelBuilder.Entity<TipoBeneficios>(new TipoBeneficiosMap().Configure);
+            modelBuilder.Entity<TipoDocumentos>(new TipoDocumentosMap().Configure);
+            modelBuilder.Entity<HistoricoPunicao>(new HistoricoPunicaoMap().Configure);
+
             base.OnModelCreating(modelBuilder);
         }
 

@@ -66,7 +66,7 @@ namespace RSBrasil.API.Controllers
                     else
                         return BadRequest("Cliente já cadastrado!");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return BadRequest("Erro inesperado!");
                 }

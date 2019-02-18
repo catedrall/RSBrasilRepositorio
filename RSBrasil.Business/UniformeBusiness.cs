@@ -1,4 +1,5 @@
 ﻿using RSBrasil.Data;
+using RSBrasil.Model.DTOs;
 using RSBrasil.Model.Entidades;
 using RSBrasil.Model.Interface.Data;
 using System;
@@ -13,44 +14,46 @@ namespace RSBrasil.Business
 
         public Uniforme Inserir(Uniforme uniforme)
         {
-            //var existe = repositorioUniforme.BuscaQualquerParametro(x => x.CNPJ == uniforme.CNPJ);
-            //if (existe == null)
-            //{
+            try
+            {
                 uniforme.DataInclusao = DateTime.Now;
                 return repositorioUniforme.Inserir(uniforme);
-            //}
-            //else
-            //{
-            //    return null;
-            //}
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public Uniforme BuscaCliente(int Id)
+        public Uniforme BuscaUniforme(int Id)
         {
             if (Id > 0)
             {
-                Uniforme uniforme = repositorioUniforme.PesquisarPorId(Id);
-                if (uniforme != null)
+                try
                 {
-                    //uniforme.ColcarMascara();
+                    Uniforme uniforme = repositorioUniforme.PesquisarPorId(Id);
+                    return uniforme;
                 }
-                return uniforme;
+                catch (Exception)
+                {
+                    return null;
+                }
             }
             else
                 return null;
         }
 
         public List<Uniforme> ListarTodos()
-        {
-            List<Uniforme> clientes = repositorioUniforme.Listar();
-            if (clientes != null)
+        {            
+            try
             {
-                foreach (var item in clientes)
-                {
-                    //item.ColcarMascara();
-                }
+                List<Uniforme> uniformes = repositorioUniforme.Listar();
+                return uniformes;
             }
-            return clientes;
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public void ExcluirCliente(int Id)
@@ -62,21 +65,17 @@ namespace RSBrasil.Business
             }
         }
 
-        /*public void EditarCliente(ClienteDTO uniforme)
+        public void EditarUniforme(UniformeDTO uniforme)
         {
             if (uniforme != null)
             {
-                uniforme local = repositorioUniforme.PesquisarPorId(uniforme.Id);
-                local.CNPJ = uniforme.CNPJ;
-                local.Contato = uniforme.Contato;
+                Uniforme local = repositorioUniforme.PesquisarPorId(uniforme.Id);
+                local.DataCompra = uniforme.DataCompra;
+                local.Descricao = uniforme.Descricao;
                 local.DataAlteracao = DateTime.Now;
-                local.Email = uniforme.Email;
-                local.IdContrato = uniforme.IdContrato;
-                local.NomeFantasia = uniforme.NomeFantasia;
-                local.RazaoSocial = uniforme.RazaoSocial;
-                local.Telefone = uniforme.Telefone;
+                local.Duracao = uniforme.Duracao;
                 repositorioUniforme.Atualizar(local);
             }
-        }*/
+        }
     }
 }

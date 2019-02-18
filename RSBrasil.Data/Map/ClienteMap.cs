@@ -15,10 +15,6 @@ namespace RSBrasil.Data.Map
 
             builder.HasKey(c => c.Id);
 
-            /*builder.Property(c => c.RazaoSocial)
-                .IsRequired()
-                .HasColumnName("RazaoSocial");*/
-
             builder.Property(c => c.RazaoSocial)
                 .HasColumnName("RazaoSocial");
 

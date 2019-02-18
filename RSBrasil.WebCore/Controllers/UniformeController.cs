@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RSBrasil.Model.Entidades;
@@ -28,6 +29,13 @@ namespace RSBrasil.Web.Controllers
 
         public ActionResult Novo()
         {
+            ViewBag.IdFuncionario = new SelectList
+                (
+                    GetFuncionarioAsync(),
+                    "Id",
+                    "Nome"
+                );
+
             return View();
         }
 
@@ -35,7 +43,23 @@ namespace RSBrasil.Web.Controllers
         {
             return View();
         }
-                
+
+        public List<Funcionario> GetFuncionarioAsync()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                string url = _configuration["EPListarFuncionarios"];
+                var response = client.GetStringAsync(url);
+                var funcionarios = JsonConvert.DeserializeObject<List<Funcionario>>(response.Result);
+                return funcionarios;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public List<Uniforme> GetClienteAsync()
         {
             try

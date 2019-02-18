@@ -9,9 +9,9 @@ namespace RSBrasil.Business
 {
     public class HistoricoFaltasBusiness
     {
-        private IRepositorioBase<HistoricoDeFalta> repositorioHistoricoFaltas = new Repositorio<HistoricoDeFalta>();
+        private IRepositorioBase<HistoricoFalta> repositorioHistoricoFaltas = new Repositorio<HistoricoFalta>();
 
-        public HistoricoDeFalta Inserir(HistoricoDeFalta HistoricoDeFalta)
+        public HistoricoFalta Inserir(HistoricoFalta HistoricoDeFalta)
         {
             HistoricoDeFalta.DataInclusao = DateTime.Now;
 
@@ -25,13 +25,13 @@ namespace RSBrasil.Business
             }
         }
 
-        public HistoricoDeFalta BuscaFalta(int Id)
+        public HistoricoFalta BuscaFalta(int Id)
         {
             if (Id > 0)
             {
                 try
                 {
-                    HistoricoDeFalta falta = repositorioHistoricoFaltas.PesquisarPorId(Id);
+                    HistoricoFalta falta = repositorioHistoricoFaltas.PesquisarPorId(Id);
                     return falta;
                 }
                 catch (Exception)
@@ -43,11 +43,11 @@ namespace RSBrasil.Business
                 return null;
         }
 
-        public List<HistoricoDeFalta> ListarTodosPorId(int IdFuncionario)
+        public List<HistoricoFalta> ListarTodosPorId(int IdFuncionario)
         {
             try
             {
-                List<HistoricoDeFalta> faltas = repositorioHistoricoFaltas.BuscaTodosQualquerParametro(x => x.IdFuncionario == IdFuncionario);
+                List<HistoricoFalta> faltas = repositorioHistoricoFaltas.BuscaTodosQualquerParametro(x => x.IdFuncionario == IdFuncionario);
                 return faltas;
             }
             catch (Exception)
@@ -60,16 +60,16 @@ namespace RSBrasil.Business
         {
             if (Id > 0)
             {
-                HistoricoDeFalta HistoricoDeFalta = repositorioHistoricoFaltas.PesquisarPorId(Id);
+                HistoricoFalta HistoricoDeFalta = repositorioHistoricoFaltas.PesquisarPorId(Id);
                 repositorioHistoricoFaltas.Excluir(HistoricoDeFalta);
             }
         }
 
-        public void EditarFalta(HistoricoDeFaltaDTO historicoDeFalta)
+        public void EditarFalta(HistoricoFaltaDTO historicoDeFalta)
         {
             if (historicoDeFalta != null)
             {
-                HistoricoDeFalta local = repositorioHistoricoFaltas.PesquisarPorId(historicoDeFalta.Id);
+                HistoricoFalta local = repositorioHistoricoFaltas.PesquisarPorId(historicoDeFalta.Id);
                 local.DataFalta = historicoDeFalta.DataFalta;
                 local.IdCliente = historicoDeFalta.IdCliente.Value;
                 repositorioHistoricoFaltas.Atualizar(local);
