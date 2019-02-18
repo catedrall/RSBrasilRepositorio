@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using RSBRasil.Model.Entidades;
+using RSBrasil.Model.Entidades;
+using RSBrasil.Model.Enuns;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 
 namespace RSBrasil.Web.Controllers
@@ -29,6 +31,14 @@ namespace RSBrasil.Web.Controllers
 
         public ActionResult Novo()
         {
+            var enumDocs = from EDocAfastamento e in Enum.GetValues(typeof(EDocAfastamento))
+                              select new
+                              {
+                                  ID = (int)e,
+                                  Name = e.ToString()
+                              };
+            ViewBag.DocsList = new SelectList(enumDocs, "ID", "Name");
+
             ViewBag.IdFuncionario = new SelectList
                 (
                     GetFuncionarioAsync(),
